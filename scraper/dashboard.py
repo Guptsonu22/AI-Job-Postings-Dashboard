@@ -4,7 +4,9 @@ import altair as alt
 import os
 
 # Load data
-df = pd.read_csv("data/skill_trends.csv")
+script_dir = os.path.dirname(os.path.abspath(__file__))
+csv_path = os.path.join(script_dir, "data", "skill_trends.csv")
+df = pd.read_csv(csv_path)
 
 st.set_page_config(page_title="AI Job Skills Dashboard", layout="centered")
 st.title("📊 AI Job Skills Dashboard")
